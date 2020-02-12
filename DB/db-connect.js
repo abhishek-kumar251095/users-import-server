@@ -1,5 +1,5 @@
 const mongoose = require('mongoose'),
-      connectionUri = process.env.DBCONNECT; //Connection URI defined in .env file
+      connectionUri = process.env.DBCONNECT+"&w=majority"; //Connection URI defined in .env file
 
 
 // Connects to DB using Mongoose API
