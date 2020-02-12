@@ -36,7 +36,7 @@ exports.getUsers = async function(req, res){
 */
 exports.uploadUserData = function(filename){
     
-    const csvFilePath = process.env.FILE_PATH
+    const csvFilePath = 'CsvData/Upload'
                                 + '/' + filename;
 
         csvToJson()
