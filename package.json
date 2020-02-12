@@ -1,0 +1,26 @@
+{
+  "name": "users-import-server",
+  "version": "1.0.0",
+  "description": "Imports a bunch of users from a csv and displays the imported data.",
+  "engines": {
+    "node": "12.13.0"
+  },
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Abhishek",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "cron": "^1.8.2",
+    "csvtojson": "^2.0.10",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.11",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.2"
+  }
+}
