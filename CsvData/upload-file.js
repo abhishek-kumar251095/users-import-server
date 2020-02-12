@@ -6,7 +6,7 @@
 const multer = require('multer');
 
 const path = process.cwd()+"/CsvData/Upload";
-
+console.log(path);
 let storage = multer.diskStorage({
     destination: (req, file, cb) => {
       cb(null, path);
