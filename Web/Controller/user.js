@@ -49,11 +49,11 @@ exports.uploadUserData = function(filename){
             for(let i=0;i<10;i++)
             {
                 tempLength = Math.ceil(users.length/10);
-                init = i*templength;
+                init = i*tempLength;
                 final = (i+1)*tempLength;
                 tempUsers = users.slice(init,final);
-                
-                userModel.insertMany(users);
+
+                userModel.insertMany(tempUsers);
             }
         })
         .then(() => {
