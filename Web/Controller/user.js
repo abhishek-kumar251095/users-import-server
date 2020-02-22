@@ -42,7 +42,19 @@ exports.uploadUserData = function(filename){
         csvToJson()
         .fromFile(csvFilePath)
         .then(users => {
-            userModel.insertMany(users)
+            let tempUsers = [];
+            let tempLength = 0;
+            let init = 0;
+            let final = 0;
+            for(let i=0;i<10;i++)
+            {
+                tempLength = Math.ceil(users.length/10);
+                init = i*templength;
+                final = (i+1)*tempLength;
+                tempUsers = users.slice(init,final);
+                
+                userModel.insertMany(users);
+            }
         })
         .then(() => {
             console.log("User data inserted!");
